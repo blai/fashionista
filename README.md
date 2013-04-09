@@ -41,7 +41,7 @@ fashionista([require('myTheme'), require('yourTheme')]).decorate(app);
 
 When you have one or more themes loaded, the default `foundation` theme will be appended at the end of the list (if you manually included `foundation` in the list, the duplicated copy will not be appended). In any case (including when there is only `foundation` theme is loaded), the first in the list will be applied to your app. But you can easily switch the theme using what's `fashionista`'s client support using javascript:
 
-```
+```html
 <html>
   <head>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -71,12 +71,12 @@ In the above code, clicking each button will apply the named theme respectively.
 
 As we see, integrating `fashionista` on html side is simply inserting the following line anywhere after your jQuery or Zepto:
 
-```
+```html
 <script type="text/javascript" src="/fashionista"></script>
 ```
 
 In fact, all themes managed by `fashionista` (and any assets being consumed by these themes) will all be loaded under the root `/fashionista`. For example, the `myTheme` in the previous example is mounted at `/fashionista/myTheme/myTheme.css`. If, for any reason, you dislike `fashionista` to be part of your path, you can change it like so:
-```
+```javascript
 // in your express.js script
 var express = require('express');
 var app = express();
@@ -88,12 +88,12 @@ fashionista({
 }).decorate(app);
 ```
 Now your `myTheme` will be mounted at `/themes/myTheme/myTheme.css` after your integrate `fashionista` in html like so:
-```
+```html
 <script type="text/javascript" src="/themes"></script>
 ```
 
 If you like to make your code look less clunky, the following code is equivalent to the above:
-```
+```javascript
 // in your express.js script
 var express = require('express');
 var app = express();
