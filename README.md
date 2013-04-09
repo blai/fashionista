@@ -112,7 +112,8 @@ fashionista.decorate(app);
 
 It would be much easier if you use [generator-foundation](https://github.com/blai/generator-foundation) to generate your custome theme module project.
 
-### examples (WIP)
+### examples
+* [https://github.com/blai/foundation-theme-patience](https://github.com/blai/foundation-theme-patience) - a very simple custom foundation theme
 
 
 ## License
