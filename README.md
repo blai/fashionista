@@ -1,4 +1,4 @@
-# fashionista [![Build Status](https://secure.travis-ci.org/blai/fashionista.png?branch=master)](http://travis-ci.org/blai/fashionista)
+# fashionista.js [![Build Status](https://secure.travis-ci.org/blai/fashionista.png?branch=master)](http://travis-ci.org/blai/fashionista)
 
 > Apply customized themes to connect/express apps, based on the [Stylus port of Zurb Foundation theme](https://github.com/blai/foundation)
 
