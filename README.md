@@ -17,12 +17,12 @@ And in your html code (note: `fashionista` requires either jQuery or Zepto's `$`
 
 ```html
 <html>
-	<head>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/fashionista"></script>
   </head>
   <body>
-  	<h1>your content ... </h1>
+    <h1>your content ... </h1>
   </body>
 </html>
 ```
@@ -43,24 +43,24 @@ When you have one or more themes loaded, the default `foundation` theme will be 
 
 ```
 <html>
-	<head>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/fashionista"></script>
     <script type="text/javascript">
-    	$(document).ready(function() {
-    		$('.myTheme').click(function() {
-    			fashionista.use('myTheme');
-    		})
-    		$('.yourTheme').click(function() {
-    			fashionista.use('yourTheme');
-    		})
-    	});
+      $(document).ready(function() {
+        $('.myTheme').click(function() {
+          fashionista.use('myTheme');
+        })
+        $('.yourTheme').click(function() {
+          fashionista.use('yourTheme');
+        })
+      });
     </script>
   </head>
   <body>
-  	<h1>your content ... </h1>
-  	<button class='myTheme'>Apply myTheme</button>
-  	<button class='yourTheme'>Apply yourTheme</button>
+    <h1>your content ... </h1>
+    <button class='myTheme'>Apply myTheme</button>
+    <button class='yourTheme'>Apply yourTheme</button>
   </body>
 </html>
 ```
@@ -83,8 +83,8 @@ var app = express();
 var fashionista = require('fashionista');
 
 fashionista({
-	themes: [require('myTheme'), require('yourTheme')],
-	path: '/themes'
+  themes: [require('myTheme'), require('yourTheme')],
+  path: '/themes'
 }).decorate(app);
 ```
 Now your `myTheme` will be mounted at `/themes/myTheme/myTheme.css` after your integrate `fashionista` in html like so:
@@ -100,8 +100,8 @@ var app = express();
 var Fashionista = require('fashionista');
 
 var fashionista = new Fashionista({
-	themes: [require('myTheme'), require('yourTheme')],
-	path: '/themes'
+  themes: [require('myTheme'), require('yourTheme')],
+  path: '/themes'
 });
 fashionista.decorate(app);
 ```
