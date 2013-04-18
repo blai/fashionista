@@ -1,4 +1,4 @@
-# fashionista [![Build Status](https://secure.travis-ci.org/blai/fashionista.png?branch=master)](http://travis-ci.org/blai/fashionista)
+# fashionista.js [![Build Status](https://secure.travis-ci.org/blai/fashionista.png?branch=master)](http://travis-ci.org/blai/fashionista)
 
 > Apply customized themes to connect/express apps, based on the [Stylus port of Zurb Foundation theme](https://github.com/blai/foundation)
 
@@ -112,7 +112,8 @@ fashionista.decorate(app);
 
 It would be much easier if you use [generator-foundation](https://github.com/blai/generator-foundation) to generate your custome theme module project.
 
-### examples (WIP)
+### examples
+* [https://github.com/blai/foundation-theme-patience](https://github.com/blai/foundation-theme-patience) - a very simple custom foundation theme
 
 
 ## License
