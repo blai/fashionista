@@ -120,4 +120,5 @@ Copyright (c) 2013 Brian Lai Licensed under the MIT license.
 
 ## Release History
 
+* 2013-04-18 `v0.1.1` also load foundation scripts automatically
 

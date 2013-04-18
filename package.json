@@ -1,7 +1,7 @@
 {
   "name": "fashionista",
   "description": "Apply themes to connect/express apps using the Stylus port of Zurb Foundation themes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/blai/fashionista",
   "author": {
     "name": "Brian Lai"
@@ -29,7 +29,7 @@
     "temp": "~0.5.0",
     "stylus": "~0.32.1",
     "connect": "~2.7.4",
-    "foundation": "~4.1.1-s1",
+    "foundation": "~4.1.2",
     "lodash": "~1.1.1"
   },
   "devDependencies": {
