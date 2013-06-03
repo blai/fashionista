@@ -25,12 +25,12 @@
 				'/fashionista/foundation/foundation/foundation.cookie.js',
 				'/fashionista/foundation/foundation/foundation.dropdown.js',
 				'/fashionista/foundation/foundation/foundation.forms.js',
+				'/fashionista/foundation/foundation/foundation.interchange.js',
 				'/fashionista/foundation/foundation/foundation.joyride.js',
 				'/fashionista/foundation/foundation/foundation.magellan.js',
 				'/fashionista/foundation/foundation/foundation.orbit.js',
 				'/fashionista/foundation/foundation/foundation.placeholder.js',
 				'/fashionista/foundation/foundation/foundation.reveal.js',
-				'/fashionista/foundation/foundation/foundation.section.js',
 				'/fashionista/foundation/foundation/foundation.section.js',
 				'/fashionista/foundation/foundation/foundation.tooltips.js',
 				'/fashionista/foundation/foundation/foundation.topbar.js'
