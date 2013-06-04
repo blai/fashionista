@@ -13,8 +13,11 @@
 		self.themes = themes;
 		self.options = (options || {});
 		self.names = options.names || Object.keys(themes);
-		for (var theme in themes) {
-			$('head').append('<link rel="stylesheet" title="' + theme + '" href="' + themes[theme] + '" type="text/css" disabled="disabled" />');
+
+		if (!self.options.skipLink) {
+			for (var theme in themes) {
+				$('head').append('<link rel="stylesheet" title="' + theme + '" href="' + themes[theme] + '" type="text/css" disabled="disabled" />');
+			}
 		}
 
 		if (!self.options.skipLib) {

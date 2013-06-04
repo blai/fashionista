@@ -50,10 +50,13 @@ When you have one or more themes loaded, the default `foundation` theme will be 
       $(document).ready(function() {
         $('.myTheme').click(function() {
           fashionista.use('myTheme');
-        })
+        });
         $('.yourTheme').click(function() {
           fashionista.use('yourTheme');
-        })
+        });
+        $('.nextTheme').click(function() {
+          fashionista.next(); // this will switch to the next theme using Round-robin style
+        });
       });
     </script>
   </head>
@@ -61,6 +64,7 @@ When you have one or more themes loaded, the default `foundation` theme will be 
     <h1>your content ... </h1>
     <button class='myTheme'>Apply myTheme</button>
     <button class='yourTheme'>Apply yourTheme</button>
+    <button class='nextTheme'>Apply next theme</button>
   </body>
 </html>
 ```
@@ -106,9 +110,34 @@ var fashionista = new Fashionista({
 fashionista.decorate(app);
 ```
 
+### customized work flow
+While the following line kinda does everything for you in one shot, there are times when you want to have a little more control over your application work flow (e.g. when to load the themes, etc)
+```html
+<script type="text/javascript" src="/fashionista"></script>
+```
+
+##### Customize work flow on browser side
+```html
+<script type="text/javascript" src="/js/hpui-jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/fashionista/fashionista.js"></script><!-- noted the url difference -->
+<script type="text/javascript">
+	var fashionista;
+  $.getJSON('/fashionista/themes', function(data) {
+    fashionista = new Fashionista(data.themes, {names: data.names});
+    fashionista.next();
+  });
+  $('.myTheme').click(function() {
+  	fashionista.use('myTheme');
+  });
+  $('.nextTheme').click(function() {
+  	fashionista.next();
+  });
+</script>
+```
+
 ### creating `fashionista`-compatible customized Foundation theme
 
-`fashionista` only serve the [Stylus port of Foundation](https://github.com/blai/foundation) for now. With that in mind, your theme module should already be exporting a `plugin` function much like [this one](https://github.com/blai/foundation/blob/master/stylus/foundation.js). All variables being exported in the stylus port of foundation.js is required for any custom theme that is intended to work with `fashionista`.
+`fashionista` only serve the [Stylus port of Foundation](https://github.com/blai/foundation) for now. With that in mind, your theme module should already be exporting a `plugin` function much like [this one](https://github.com/blai/foundation/blob/stylus/stylus/foundation.js). All variables being exported in the stylus port of foundation.js is required for any custom theme that is intended to work with `fashionista`.
 
 It would be much easier if you use [generator-foundation](https://github.com/blai/generator-foundation) to generate your custome theme module project.
 
@@ -121,5 +150,6 @@ Copyright (c) 2013 Brian Lai Licensed under the MIT license.
 
 ## Release History
 
+* 2013-06-03 `v0.3.3` UMD browser script, allows custom work flow. updated readme
 * 2013-04-18 `v0.1.1` also load foundation scripts automatically
 
