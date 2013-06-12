@@ -41,10 +41,14 @@
 			var libLoaded = 0;
 
 			libs.forEach(function(js) {
-				$.getScript(js, function() {
-					libLoaded++;
-					if (libLoaded === libs.length) {
-						self.init();
+				$.ajax({
+					url: js,
+					data: '',
+					complete: function() {
+						libLoaded++;
+						if (libLoaded === libs.length) {
+							self.init();
+						}
 					}
 				});
 			});
